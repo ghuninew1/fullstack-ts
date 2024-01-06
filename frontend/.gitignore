@@ -1,3 +1,5 @@
+.vscode*
+
 # Logs
 logs
 *.log
@@ -129,6 +131,12 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-.vscode
-misc
-.DS_Store
+###
+run.zsh
+stop.zsh
+cf.sh
+.sh
+src/client_secret.json
+client_secret.json
+src/utils/ssl
+frontend/src/utils/ssl

@@ -1,0 +1,40 @@
+{
+    "name": "api-backend",
+    "version": "1.1.0",
+    "description": "https://github.com/ghuninew1",
+    "author": "GhuniNew",
+    "private": true,
+    "type": "module",
+    "imports": {
+        "#/*": "./src/*",
+        "#*": "./src/*"
+    },
+    "scripts": {
+        "dev": "nodemon --env-file=.env ./src/server.js",
+        "pm2": "pm2 start ecosystem.config.cjs",
+        "devbun": "bun --watch run --env-file=.env server.ts",
+        "start": "node --env-file=.env server.ts"
+    },
+    "dependencies": {
+        "axios": "^1.6.5",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.2",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.0.3"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.6",
+        "googleapis": "^129.0.0",
+        "morgan": "^1.10.0",
+        "multer": "1.4.5-lts.1",
+        "nodemailer": "^6.9.8",
+        "nodemon": "^3.0.2",
+        "ping": "^0.4.4",
+        "uuid": "^9.0.1",
+        "ws": "^8.16.0"
+    },
+    "keywords": []
+}
