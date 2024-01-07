@@ -1,4 +1,4 @@
-import { isObj } from "#utils";
+import { isObj } from "#utils/utils";
 
 const PingTable = (props) => {
     const { dataBody = {} } = props;

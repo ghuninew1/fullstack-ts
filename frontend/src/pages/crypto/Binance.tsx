@@ -1,6 +1,6 @@
 import { Button } from "#components";
 import useSocket from "#hook/useSocket";
-import { cx } from "#utils";
+import { cx } from "#utils/utils";
 import { useState } from "react";
 import EventsBi from "./EventsBi";
 import ConnectionState from "./ConnectionState";

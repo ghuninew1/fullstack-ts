@@ -1,24 +1,23 @@
 module.exports = {
     root: true,
-    env: { browser: true, es2021: true, node: true },
+    env: { browser: true, es2021: true },
     extends: [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended",
         "plugin:tailwindcss/recommended",
-        "plugin:prettier/recommended"
+    ],
+    overrides: [
+        {
+            files: ["*.ts", "*.tsx", "*.js"],
+            parser: "@typescript-eslint/parser",
+        },
     ],
     ignorePatterns: ["dist", ".eslintrc.cjs"],
-    parser: '@typescript-eslint/parser',
-    parserOptions: { 
-        ecmaVersion: 'latest', 
-        sourceType: 'module',
-        "ecmaFeatures": {
-            "jsx": true
-        } 
-    },
-    plugins: ["react-refresh", "react", "react-hooks", "tailwindcss"],
+    settings: { react: { version: "18.2.0" } },
+    parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+    plugins: ["react-refresh", "react", "react-hooks"],
     rules: {
         "react-refresh/only-export-components": [
             "warn",

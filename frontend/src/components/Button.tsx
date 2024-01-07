@@ -1,4 +1,4 @@
-import { cx } from "#utils";
+import { cx } from "#utils/utils";
 import React,{ memo, useRef,forwardRef } from "react";
 
 type Size = "sm" | "md" | "lg" | "xl" | "xxl";

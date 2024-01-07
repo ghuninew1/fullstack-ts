@@ -51,7 +51,7 @@ const initUser = {
     isGg: false,
     isEmail: false,
     timestamp: 0,
-} as User;
+};
 
 export const AuthContext = createContext<AuthContextProps>(null);
 
@@ -62,27 +62,23 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     });
 
     useEffect(() => {
-        if (user) localStorage.setItem("auth", JSON.stringify(user));
-    }, [user]);
+        if (user?.username) {
+            localStorage.setItem("auth", JSON.stringify(user));
+        } else {
+            localStorage.removeItem("auth");
+        }
+    }, [user, user?.username]);
 
     useEffect(() => {
-        if (!user?.expires) return;
-        const expires: number = user?.expires || 0;
-        const timer = setTimeout(() => {
+        const expires = user?.expires;
+        if (!expires) return;
+        if (expires < Date.now()) {
             setUser(initUser);
-            localStorage.removeItem("auth");
-            console.log("time out");
-        }, expires - Date.now());
-        return () => clearTimeout(timer);
+            return;
+        }        
     }, [user?.expires]);
 
-    const login: any = useCallback((user: User) : void => {
-            setUser(user);
-        },
-        [setUser]
-    );
-
-    // const login = useCallback((user: User) => setUser(user), [setUser]);
+    const login: any = useCallback((user: any) =>  setUser((prev) => ({  ...prev, ...user, })), [setUser]);
     const logout: any = useCallback(() => setUser(initUser), [setUser]);
 
     return (

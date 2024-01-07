@@ -1,5 +1,5 @@
 import { Input, Button } from "#components";
-import { cx } from "#utils";
+import { cx } from "#utils/utils";
 
 const FormInput = (props) => {
     const { onSubmit = () => {}, className = "", isProps } = props;

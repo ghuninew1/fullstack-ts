@@ -6,7 +6,7 @@ type AuthRouteProps = {
     children: React.ReactNode
 }
 
-export default function AuthRoute({ children }: AuthRouteProps) {
+export default function AuthRoute({ children: children }: AuthRouteProps) {
     const { isUser } = Auth();
 
     const isUserLoggedIn: string| boolean | undefined | null = isUser?.username;

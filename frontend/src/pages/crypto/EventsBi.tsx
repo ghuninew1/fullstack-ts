@@ -1,4 +1,4 @@
-import { cx, toTime, isObj } from "#utils";
+import { cx, toTime, isObj } from "#utils/utils";
 
 const EventsBi = ({ events = {} }) => {
     const formatNumber = (num:number) => num && Number(num).toFixed(4);

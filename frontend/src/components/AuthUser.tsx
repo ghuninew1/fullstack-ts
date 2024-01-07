@@ -6,7 +6,7 @@ type AuthUserProps = {
     children: React.ReactNode
 }
 
-export default function AuthUser({ children }: AuthUserProps) {
+export default function AuthUser({ children: children }: AuthUserProps) {
     const { pathname } = useLocation();
     const { isUser } = Auth();
 

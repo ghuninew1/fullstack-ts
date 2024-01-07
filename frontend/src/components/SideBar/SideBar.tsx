@@ -1,5 +1,5 @@
 import { navLinks } from "#assets/navLinks";
-import { cx } from "#utils";
+import { cx } from "#utils/utils";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";

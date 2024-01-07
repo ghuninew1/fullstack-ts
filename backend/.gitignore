@@ -132,3 +132,4 @@ dist
 .vscode
 misc
 .env
+.DS_Store

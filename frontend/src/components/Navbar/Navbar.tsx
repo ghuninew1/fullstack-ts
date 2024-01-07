@@ -6,7 +6,7 @@ import {
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { login } from "#assets/navLinks";
-import { cx } from "#utils";
+import { cx } from "#utils/utils";
 
 const Navbar = ({ userMenu = false }) => {
     const [open, setOpen] = useState(false);

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { cx } from "#utils";
+import { cx } from "#utils/utils";
 
 export const SideBarIcon = ({ icon, text = "tooltip 💡", to, ...props }) => {
     return (
